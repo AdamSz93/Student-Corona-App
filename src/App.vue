@@ -27,10 +27,8 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+      <v-btn v-on:click = "goToProfile()"
+
       >
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
@@ -45,6 +43,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import router from './router';
 
 export default {
   name: 'App',
@@ -52,7 +51,11 @@ export default {
   components: {
     HelloWorld,
   },
-
+  methods: {
+    goToProfile: function(){
+        router.push('profile')
+    }
+  },
   data: () => ({
     //
   }),
