@@ -45,9 +45,11 @@ export default {
     return {
       items: [
         { title: "Home", icon: "mdi-view-dashboard", route: "/home" },
+        { title: "Registration", icon: "mdi-help-box", route: "/registration" },
         { title: "Profile", icon: "mdi-image", route: "/profile" },
-        { title: "ShowHelpers", icon: "mdi-help-box", route: "/showhelpers" },
-        { title: "Registration", icon: "mdi-help-box", route: "/registration" }
+        { title: "ShowHelpers", icon: "mdi-account-check", route: "/showhelpers" },
+        { title: "QuestionManager", icon: "mdi-comment-question", route: "/questionmanager" },
+        
       ],
       right: null
     };
