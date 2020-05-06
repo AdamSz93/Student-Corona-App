@@ -5,3 +5,7 @@ University Project for helping Students during the Corona Crisis
 
 - Feature A
 - Feature B
+
+# Entwicklung
+1. clone repository
+2. npm install

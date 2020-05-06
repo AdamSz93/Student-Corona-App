@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>HALLO WELT</h1>
+        <h1>Profile.vue</h1>
     </div>
 </template>
