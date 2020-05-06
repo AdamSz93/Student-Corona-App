@@ -1,29 +1,55 @@
 <template>
-  <div id="app">
-    <div>
-      <router-link to="/profile">Profile</router-link>
-      <router-link to="/MatchingHelper">MatchingHelper</router-link>
-      <router-view />
-    </div>
-  </div>
+  <v-app>
+    <v-navigation-drawer app>
+      <v-list dense nav>
+        <v-list-item v-for="item in items" :key="item.title" link>
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title><router-link v-bind:to="item.route">{{ item.title }}</router-link></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar app color="primary" dark>
+      <!--<v-btn>
+        <router-link to="/profile">goto Profile</router-link>
+      </v-btn>-->
+    </v-app-bar>
+
+    <!-- Sizes your content based upon application components -->
+    <v-content>
+      <!-- Provides the application the proper gutter -->
+      <v-container fluid>
+        <!-- If using vue-router -->
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+
+    <v-footer app>
+      <!-- -->
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import router from './router';
-
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-
-  },
-  methods: {
-    goToProfile: function(){
-        router.push('profile')
-    }
-  },
-  data: () => ({
-    //
-  }),
+  components: {},
+  methods: {},
+  data: () => {
+    return {
+      items: [
+        { title: "Home", icon: "mdi-view-dashboard", route: "/home" },
+        { title: "Profile", icon: "mdi-image", route: "/profile" },
+        { title: "ShowHelpers", icon: "mdi-help-box", route: "/showhelpers" }
+      ],
+      right: null
+    };
+  }
 };
 </script>
