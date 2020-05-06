@@ -26,6 +26,11 @@ Vue.use(VueRouter)
     path: '/showhelpers',
     name: 'ShowHelpers',
     component: () => import(/* webpackChunkName: "about" */ '../views/ShowHelpers.vue')
+  },
+  {
+    path: '/registration',
+    name: 'Registration',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Registration.vue')
   }
 ]
 
