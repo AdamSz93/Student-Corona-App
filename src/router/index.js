@@ -30,6 +30,31 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/QuestionManager.vue')
   },
   {
+    path: '/groupmanager',
+    name: 'GroupManager',
+    component: () => import(/* webpackChunkName: "about" */ '../views/GroupManager.vue')
+  },
+  {
+    path: '/showgroup',
+    name: 'showgroup',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ShowGroup.vue')
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Settings.vue')
+  },
+  {
+    path: '/help',
+    name: 'Help',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Help.vue')
+  },
+  {
+    path: '/logout',
+    name: 'Logout',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Logout.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
@@ -42,6 +67,15 @@ Vue.use(VueRouter)
     name: 'QuestionForm',
     component: () => import(/* webpackChunkName: "about" */ '../views/QuestionForm.vue')
   },
+  {
+    path: '/messenger',
+    name: 'Messenger',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Messenger.vue')
+  },
+  
 ]
 
 const router = new VueRouter({
