@@ -66,7 +66,7 @@
 
     <v-app-bar app dark>
       <v-tabs>
-        <v-tab><router-link to="/home">Home</router-link></v-tab>
+        <v-tab><router-link to="/questionmanager">Home</router-link></v-tab>
         <v-tab><router-link to="/profile">Profil</router-link></v-tab>
         <v-tab><router-link to="/settings">xxxEinstellungen</router-link></v-tab>
         <v-tab><router-link to="/Help">xxxHilfe</router-link></v-tab>
