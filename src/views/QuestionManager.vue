@@ -18,6 +18,17 @@
     An mich gestellte Fragen
   </v-tab>
   <v-tab-item>
+
+
+
+
+
+
+
+
+
+
+
     <v-card flat>
       <v-card-text><v-subheader v-if="!container_visible">Du hast keine offen gebliebenen Fragen.</v-subheader>
  <v-card v-if="container_visible"
@@ -65,16 +76,81 @@
         <v-icon @click="newQuestion()">mdi-dots-vertical</v-icon>
       </v-btn>
       </template>
-      <v-list>
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-          @click="del_thread(threads.id, container_visible); snackbar = true"
+
+      <v-list>  
+
+
+
+
+
+
+<v-dialog v-model="dialog" persistent max-width="600px">
+<template v-slot:activator="{ on }">
+         <v-list-item v-on="on">
+          <v-list-item-title>Frage ist beantwortet</v-list-item-title>
+        </v-list-item>
+      </template>
+      <v-card>
+        <v-card-title>
+          <span class="headline">Bewerte deine erhaltene Hilfe</span>
+        </v-card-title>
+        <v-card-text>
+
+            <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">Wissensstand</th>
+            <th class="text-left">Freundlichkeit</th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in helfer" :key="item.name">
+            <td>
+              <v-icon color="yellow">{{ item.knowicon }}</v-icon>
+              <v-icon color="yellow">{{ item.knowicon2 }}</v-icon>
+              <v-icon color="yellow">{{ item.knowicon3 }}</v-icon>
+              <v-icon color="yellow">{{ item.knowicon4 }}</v-icon>
+              <v-icon color="yellow">{{ item.knowicon5 }}</v-icon>
+            </td>
+            <td>
+              <v-icon color="pink">{{ item.hearticon }}</v-icon>
+              <v-icon color="pink">{{ item.hearticon2 }}</v-icon>
+              <v-icon color="pink">{{ item.hearticon3 }}</v-icon>
+              <v-icon color="pink">{{ item.hearticon4 }}</v-icon>
+              <v-icon color="pink">{{ item.hearticon5 }}</v-icon>
           
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </td>
+          </tr>
+        </tbody>
+      </template>
+  </v-simple-table>
+          <small>*indicates required field</small>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
+          <v-btn color="blue darken-1" text @click="dialog = false; del_thread(threads.id, container_visible); snackbar = true">Save</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+
+
+
+
+
+
+
+
+         
+
+
+        <v-list-item @click="newQuestion()">      
+          <v-list-item-title>Sonstiges</v-list-item-title>
         </v-list-item>
       </v-list>
+     
     </v-menu>
           
           
@@ -146,9 +222,7 @@
       </template>
       <v-list>
         <v-list-item
-          @click="del_my_thread(my_threads.id, container_visible); snackbar = true"
-          
-        >
+          @click="del_my_thread(my_threads.id, container_visible); snackbar = true">
           <v-list-item-title>Irgendwas</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -190,15 +264,28 @@ export default {
     return {
       container_visible: true,
       snackbar: false,
+      dialog: false,
       text: 'Die Frage wurde entfernt.',
+   
+      helfer: [
+          {
 
-      items: [
-        { title: 'Frage beantwortet' },
-        { title: 'Irgendwas' }
+            knowicon: "mdi-star-outline",
+            knowicon2: "mdi-star-outline",
+            knowicon3:"mdi-star-outline",
+            knowicon4:"mdi-star-outline",
+            knowicon5:"mdi-star-outline",
 
-      ],
+            hearticon: "mdi-heart-outline",
+            hearticon2: "mdi-heart-outline",
+            hearticon3:"mdi-heart-outline",
+            hearticon4:"mdi-heart-outline",
+            hearticon5:"mdi-heart-outline",
 
-      
+
+          },
+         
+        ],
 
       threads: [
         {
