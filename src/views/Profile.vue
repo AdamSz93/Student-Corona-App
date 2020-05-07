@@ -22,7 +22,7 @@
                                     </v-list-item>
 
                                     <v-list-item>
-                                        <p>Duisburg</p>
+                                        <p>{{university}}</p>
                                        
                                     </v-list-item>
 
@@ -34,7 +34,7 @@
                                     </v-list-item>
 
                                     <v-list-item>
-                                        <p>Master of Science</p>
+                                        <p>{{aspireddegree}}</p>
                                        
                                     </v-list-item>
 
@@ -55,15 +55,16 @@
 
                                     <v-list-item>
                                         <h3>Veranstaltungen </h3>
+                            
                                     </v-list-item>
 
                                     <v-list-item>
                                        <ul>
-                                           <li>Statistik 1 </li>
-                                           <li>GPT </li>
-                                           <li>Info N </li>
+                                          <li v-for="event in events" :key="event.text">
+                                                {{ event.text }}
+                                            </li>
                                        </ul>
-                                       
+                                      
                                     </v-list-item>
 
                                     
@@ -75,10 +76,10 @@
 
                                     <v-list-item>
                                         <ul>
-                                           <li>Vue.js</li>
-                                           <li>Vuetify </li>
-                                           <li>Visual Studio Code </li>
-                                           <li>Git </li>
+                                           <li v-for="knowledge in knowledges" :key="knowledge.text">
+                                                {{ knowledge.text }}
+                                            </li>
+                                            
                                        </ul>
                                     </v-list-item>
                                 </v-list>
@@ -91,12 +92,9 @@
             </v-row>
 
 
-            <v-row>
-                
+            <v-row>          
                 
             </v-row>
-        
-
 
         </v-container>
 
@@ -109,14 +107,25 @@
 
 export default {
    name:'Profile',
-   props:{
-     data:{
-         return:{
-            university:'Duisburg-Essen'
-         }
-
+  
+     data: () => {
+        return {
+        
+            university:'Duisburg-Essen',
+            aspireddegree:'Master of Science',
+            events: [
+                { text: 'Statistik 1'},
+                { text: 'GPT' },
+                { text: 'Info N' }
+            ],
+            knowledges:[
+                {text:'Vue.js'},
+                {text:'Vuetify'},
+                {text:'Visual Studio Code'},
+                {text:'Git'}
+            ]
+         } 
     
-    }
    }
   
 }
@@ -124,6 +133,6 @@ export default {
 
 
 <style scoped>
-
+   
  
 </style>
