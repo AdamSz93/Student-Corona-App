@@ -30,7 +30,9 @@
         <router-link :to="{name: 'QuestionManager'}" style="text-decoration: none">
         <v-btn color="info">Login</v-btn>
         </router-link>
+        <router-link :to="{name: 'Registration'}" style="text-decoration: none">
         <v-btn color="success" style="margin-left:10px">Register</v-btn>
+        </router-link>
 
       </v-card-actions>
     </v-card>
