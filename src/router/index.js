@@ -30,6 +30,31 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/QuestionManager.vue')
   },
   {
+    path: '/groupmanager',
+    name: 'GroupManager',
+    component: () => import(/* webpackChunkName: "about" */ '../views/GroupManager.vue')
+  },
+  {
+    path: '/showgroup',
+    name: 'showgroup',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ShowGroup.vue')
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Settings.vue')
+  },
+  {
+    path: '/help',
+    name: 'Help',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Help.vue')
+  },
+  {
+    path: '/logout',
+    name: 'Logout',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Logout.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
