@@ -92,12 +92,9 @@
             </v-row>
 
 
-            <v-row>
-                
+            <v-row>          
                 
             </v-row>
-        
-
 
         </v-container>
 
@@ -127,9 +124,7 @@ export default {
                 {text:'Visual Studio Code'},
                 {text:'Git'}
             ]
-         }
-
-    
+         } 
     
    }
   
