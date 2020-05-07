@@ -5,7 +5,7 @@
 
   <span class="bg"></span>
 
-        <v-card width="600" class="mx-auto mt-5">
+        <v-card width="600" class="mx-auto mt-5" color="rgb(255, 255, 255, 0.8)">
           <v-img 
           :src="require('../assets/logo.png')"
           class="my-5"
