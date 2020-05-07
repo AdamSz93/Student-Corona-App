@@ -103,6 +103,22 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/PostYourQuestion.vue')
   },
+  {
+    path: '/studiengangabfrage',
+    name: 'StudiengangAbfrage',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Studiengangabfrage.vue')
+  },
+  {
+    path: '/fächerabfrage',
+    name: 'FächerAbfrage',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/FächerAbfrage.vue')
+  },
   
   
 ]

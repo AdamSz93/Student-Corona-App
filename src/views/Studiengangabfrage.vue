@@ -7,7 +7,9 @@
         v-model="model" :items="studiengänge" persistent-hint prepend-icon="mdi-school-outline">
         <template v-slot:append-outer>
           <v-slide-x-reverse-transition mode="out-in" >
+            <router-link to='/FächerAbfrage'>
             <v-btn class="blue" max-width="200" v-on:click=next()> weiter </v-btn>
+            </router-link>
           </v-slide-x-reverse-transition>
         </template>
       </v-autocomplete>

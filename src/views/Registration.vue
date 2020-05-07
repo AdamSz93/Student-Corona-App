@@ -24,7 +24,9 @@
                                     <v-text-field label="Erstelle ein Passwort" v-model="password">                               
                                     </v-text-field >
                                 </v-form>
+                                <router-link to='/Studiengangabfrage'>
                                 <v-btn class="blue" max-width="150" v-on:click=register()> Registrieren </v-btn> 
+                                </router-link>
                                 <v-card-text class="caption">Mit der Registrierung stimmst du unserer Datenschutzerklärung und den AGBs zu</v-card-text>
                             </v-list-item-content>
 
