@@ -27,6 +27,8 @@
         <!-- If using vue-router -->
         <router-view></router-view>
       </v-container>
+
+     <plusbutton msg="ggg"/>   
     </v-content>
 
     <v-footer app>
@@ -36,10 +38,15 @@
 </template>
 
 <script>
+import plusbutton from "@/components/plusbutton.vue";
+
+
 export default {
   name: "App",
 
-  components: {},
+  components: {
+    plusbutton
+  },
   methods: {},
   data: () => {
     return {
