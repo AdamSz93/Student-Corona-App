@@ -56,6 +56,7 @@ export default {
         { title: "Profile", icon: "mdi-image", route: "/profile" },
         { title: "ShowHelpers", icon: "mdi-account-check", route: "/showhelpers" },
         { title: "QuestionManager", icon: "mdi-comment-question", route: "/questionmanager" },
+        { title: "Messenger", icon: "mdi-comment-question", route: "/Messenger" },
         
       ],
       right: null
