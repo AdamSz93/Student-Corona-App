@@ -118,7 +118,7 @@ export default {
             antwortzeit:'25 Minuten',
           },
            {
-            onlineicon:"mdi-star",
+            onlineicon:"mdi-circle",
             helfer: 'Timo',
             knowicon: "mdi-star",
             knowicon2:"mdi-star",
