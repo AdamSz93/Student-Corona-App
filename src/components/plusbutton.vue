@@ -8,8 +8,8 @@
      <v-container>
         <v-row class="mb-4">
             <v-column>
-                <router-link to="/questionmanager">
-                    <v-btn round color="primary" dark v-on:click="routing" v-if="seen">
+                <router-link to='/veranstaltungsauswahl'>
+                    <v-btn round color="primary" dark  v-if="seen">
                        Fragen
                     </v-btn>
                 </router-link>

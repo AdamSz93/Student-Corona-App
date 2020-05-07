@@ -71,7 +71,8 @@ Vue.use(VueRouter)
 
     path : '*',
     redirect : '/login'
-  }
+  },
+  {
 
     path: '/questionform',
     name: 'QuestionForm',
