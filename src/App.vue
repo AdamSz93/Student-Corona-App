@@ -24,7 +24,7 @@
         <v-tab><router-link to="/home">Home</router-link></v-tab>
         <v-tab><router-link to="/profile">Profil</router-link></v-tab>
         <v-tab><router-link to="/settings">xxxEinstellungen</router-link></v-tab>
-        <v-tab><router-link to="/help">xxxHilfe</router-link></v-tab>
+        <v-tab><router-link to="/VeranstaltungsAuswahl">xxxHilfe</router-link></v-tab>
         <v-tab><router-link to="/logout">xxxLogout</router-link></v-tab>
       </v-tabs>
     </v-app-bar>
