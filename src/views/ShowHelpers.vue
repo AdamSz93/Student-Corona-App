@@ -1,17 +1,16 @@
 <template>
   <div>
-    <h1>Show helpers</h1>
+   <br> <h1>Hier findest du Antwort auf deine Frage</h1> <br> <br>
     <v-card>
       <v-card-title>
-        Helfer
-        <v-spacer></v-spacer>
-        <v-text-field
+        <h4>Welche*r deiner Kommiliton*innen soll dir helfen? </h4>
+        <!--<v-text-field
           v-model="search"
           append-icon="mdi-magnify"
           label="Search"
           single-line
           hide-details
-        ></v-text-field>
+        ></v-text-field>-->
       </v-card-title>
 
      <v-simple-table>
@@ -23,10 +22,11 @@
             <th class="text-left">Wissensstand</th>
             <th class="text-left">Freundlichkeit</th>
             <th class="text-left">Durchschnittliche Antwortzeit</th>
+            <th class="text-left">Auswahl</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in desserts" :key="item.name">
+          <tr v-for="item in helfer" :key="item.name">
             <td><v-icon color="green">{{ item.onlineicon }}</v-icon> </td>
             <td>{{ item.helfer }}</td>
             <td>
@@ -43,8 +43,9 @@
               <v-icon color="pink">{{ item.hearticon4 }}</v-icon>
               <v-icon color="pink">{{ item.hearticon5 }}</v-icon>
           
-              </td>
+            </td>
             <td>{{ item.antwortzeit }}</td>
+            <td>  <v-checkbox v-model="disabled" class="mx-2" ></v-checkbox> </td>
           </tr>
         </tbody>
       </template>
@@ -66,7 +67,7 @@ export default {
   },
   data: () => {
     return {
-      desserts: [
+      helfer: [
           {
             onlineicon:"mdi-circle",
             helfer: 'Mathilda',
@@ -82,6 +83,7 @@ export default {
             hearticon4:"mdi-heart-outline",
             hearticon5:"mdi-heart-outline",
             antwortzeit:'40 Minuten',
+
           },
           {
             onlineicon:"mdi-circle-outline",
@@ -116,7 +118,7 @@ export default {
             antwortzeit:'25 Minuten',
           },
            {
-            onlineicon:"mdi-circle",
+            onlineicon:"mdi-star",
             helfer: 'Timo',
             knowicon: "mdi-star",
             knowicon2:"mdi-star",
@@ -137,3 +139,16 @@ export default {
     },
   }
 </script>
+
+
+<style scoped>
+h1{
+  color:grey;
+  text-align: center;
+}
+
+h4{
+  color:grey;
+ 
+}
+</style>
