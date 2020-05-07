@@ -50,7 +50,7 @@
       <v-col cols="12" sm="6">
 
       </v-col>
-              <router-link to='/home'>
+              <router-link to='/showhelpers'>
         <v-btn lable="Test">Absenden!</v-btn>
         </router-link>
     </v-row>
