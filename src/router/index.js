@@ -4,6 +4,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
   const routes = [
+    {
+      path: '/login',
+      name: 'Login',
+      component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+    },
   {
     path: '/home',
     name: 'Home',
@@ -63,6 +68,11 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
+
+    path : '*',
+    redirect : '/login'
+  }
+
     path: '/questionform',
     name: 'QuestionForm',
     component: () => import(/* webpackChunkName: "about" */ '../views/QuestionForm.vue')
@@ -76,6 +86,7 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/Messenger.vue')
   },
   
+
 ]
 
 const router = new VueRouter({
