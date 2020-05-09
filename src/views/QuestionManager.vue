@@ -68,8 +68,9 @@
         </v-list-item-content>
 
         <v-list-item-icon> 
+          <router-link to='/messenger'>
           <v-icon @click="openQuestion(threads.id)" :color="threads.active ? 'blue darken-2' : 'grey'">mdi-message-text</v-icon> 
-         
+         </router-link>
           <v-menu offset-y>
       <template v-slot:activator="{ on }">
         <v-btn v-on="on" icon>
