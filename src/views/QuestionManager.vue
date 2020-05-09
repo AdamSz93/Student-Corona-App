@@ -76,6 +76,7 @@
         <v-btn v-on="on" icon>
         <v-icon @click="newQuestion()">mdi-dots-vertical</v-icon>
       </v-btn>
+      
       </template>
 
       <v-list>  
@@ -248,7 +249,7 @@
     </v-card>
   </v-tab-item>  
 </v-tabs>
-
+      <plusbutton/>
     
   </div>
 
@@ -257,10 +258,13 @@
 <script>
 
 import moment from 'moment'; 
+import plusbutton from "@/components/plusbutton.vue";
 
 export default {
   name: "QuestionManager",
-  components: {},
+  components: {
+    plusbutton
+  },
   data: () => {
     return {
       container_visible: true,
