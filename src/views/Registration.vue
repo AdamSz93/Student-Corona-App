@@ -11,7 +11,7 @@
                     <v-card outlined>
                         <v-list-item three-line>
                             <v-list-item-content>
-                              <v-list-item-title class="headline md-4">Registriere Dich!</v-list-item-title>
+                              
                               <v-form > 
                                     <v-text-field label="Spitzname" v-model="nickname">                               
                                     </v-text-field >
@@ -25,7 +25,7 @@
                                     </v-text-field >
                                 </v-form>
                                 <router-link to='/Studiengangabfrage'>
-                                <v-btn class="blue" max-width="150" v-on:click=register()> Registrieren </v-btn> 
+                                <v-btn class="blue white--text" max-width="150" v-on:click=register() > Registrieren </v-btn> 
                                 </router-link>
                                 <v-card-text class="caption">Mit der Registrierung stimmst du unserer Datenschutzerklärung und den AGBs zu</v-card-text>
                             </v-list-item-content>

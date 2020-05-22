@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer app permanent>
+    <v-navigation-drawer app permanent color="blue-grey lighten-4">
       <v-list dense nav>
         <v-list-item>
           <v-list-item-avatar>
@@ -20,7 +20,7 @@
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>
-              <router-link to="/questionmanager">Fragen &amp; Antworten</router-link>
+              <router-link to="/questionmanager" class="black--text">Fragen &amp; Antworten</router-link>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -31,7 +31,7 @@
         
         <v-list-group value="true">
           <template v-slot:activator>
-            <v-list-item-title>Psychologie A</v-list-item-title>
+            <v-list-item-title class="black--text">Psychologie A</v-list-item-title>
           </template>
 
             <v-list-item>Präfrontalcortex bei Suchtverhalten?</v-list-item>
@@ -57,21 +57,20 @@
 
           <v-list-item-content>
             <v-list-item-title>
-              <router-link v-bind:to="group.route">{{ group.title }}</router-link>
+              <router-link v-bind:to="group.route" class="black--text">{{ group.title }}</router-link>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app dark>
+    <v-app-bar app color="light-blue darken-4">
       <v-tabs>
         <v-tab><router-link to="/questionmanager">Home</router-link></v-tab>
         <v-tab><router-link to="/profile">Profil</router-link></v-tab>
-        <v-tab><router-link to="/settings">xxxEinstellungen</router-link></v-tab>
-        <v-tab><router-link to="/Help">xxxHilfe</router-link></v-tab>
-        <v-tab><router-link to="/logout">xxxLogout</router-link></v-tab>
-        <v-tab><router-link to="/showhelpers">Show Helpers</router-link></v-tab>
+        <v-tab><router-link to="/settings">Einstellungen</router-link></v-tab>
+        <v-tab><router-link to="/Help">Hilfe</router-link></v-tab>
+        <v-tab><router-link to="/logout">Logout</router-link></v-tab>
       </v-tabs>
     </v-app-bar>
 
