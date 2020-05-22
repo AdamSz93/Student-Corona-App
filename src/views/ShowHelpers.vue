@@ -45,7 +45,7 @@
           
             </td>
             <td>{{ item.antwortzeit }}</td>
-            <td>  <v-checkbox v-model="disabled" class="mx-2" ></v-checkbox> </td>
+            <td>  <v-checkbox v-model="disabled" class="mx-2" v-on:click=next() ></v-checkbox> </td>
           </tr>
         </tbody>
       </template>
@@ -61,9 +61,9 @@ export default {
 
   components: {},
   methods: {
-      update:function(i){ 
-          console.log("es funzt!" + i)
-  }
+            next: function(){
+                this.$router.push('/questionmanager');
+            }
   },
   data: () => {
     return {

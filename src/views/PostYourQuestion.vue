@@ -51,7 +51,7 @@
 
       </v-col>
               <router-link to='/showhelpers'>
-        <v-btn lable="Test">Absenden!</v-btn>
+        <v-btn color="light-blue darken-4 white--text" lable="Test">Absenden!</v-btn>
         </router-link>
     </v-row>
 

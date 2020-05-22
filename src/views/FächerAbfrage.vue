@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title class="headline font-weight-regular blue-grey white--text">Profileinrichtung</v-card-title>
+    <v-card-title class="headline font-weight-regular light-blue darken-4 white--text">Profileinrichtung</v-card-title>
     <v-card-text>
       <v-subheader class="pa-0">Welche Fächer hast du bereits bestanden?</v-subheader>
       
@@ -16,7 +16,7 @@
                         dense
         ></v-combobox>
         <v-slide-x-reverse-transition mode="out-in" >
-            <v-btn class="blue" max-width="200" v-on:click=next()> weiter </v-btn>
+            <v-btn class="blue white--text" max-width="200" v-on:click=next()> weiter </v-btn>
           </v-slide-x-reverse-transition>
       </v-col>
       

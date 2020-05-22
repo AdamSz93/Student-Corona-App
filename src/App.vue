@@ -64,13 +64,13 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app color="light-blue darken-4">
+    <v-app-bar app color="light-blue darken-4" >
       <v-tabs>
-        <v-tab><router-link to="/questionmanager">Home</router-link></v-tab>
-        <v-tab><router-link to="/profile">Profil</router-link></v-tab>
-        <v-tab><router-link to="/settings">Einstellungen</router-link></v-tab>
-        <v-tab><router-link to="/Help">Hilfe</router-link></v-tab>
-        <v-tab><router-link to="/logout">Logout</router-link></v-tab>
+        <v-tab><router-link class="router-link" to="/questionmanager">Home</router-link></v-tab>
+        <v-tab><router-link class="router-link" to="/profile">Profil</router-link></v-tab>
+        <v-tab><router-link class="router-link" to="/settings">Einstellungen</router-link></v-tab>
+        <v-tab><router-link class="router-link" to="/Help">Hilfe</router-link></v-tab>
+        <v-tab><router-link class="router-link" to="/logout">Logout</router-link></v-tab>
       </v-tabs>
     </v-app-bar>
 
@@ -132,3 +132,7 @@ export default {
   }
 };
 </script>
+
+<style>
+ .router-link {text-decoration: none;}
+</style>

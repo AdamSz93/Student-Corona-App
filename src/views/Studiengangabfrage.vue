@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title class="headline font-weight-regular blue-grey white--text">Profileinrichtung</v-card-title>
+    <v-card-title class="headline font-weight-regular light-blue darken-4 white--text">Profileinrichtung</v-card-title>
     <v-card-text>
       <v-subheader class="pa-0">In welchem Studiengang bist du eingeschrieben?</v-subheader>
       <v-autocomplete
@@ -8,7 +8,7 @@
         <template v-slot:append-outer>
           <v-slide-x-reverse-transition mode="out-in" >
             <router-link to='/FächerAbfrage'>
-            <v-btn class="blue" max-width="200" v-on:click=next()> weiter </v-btn>
+            <v-btn class="blue white--text" max-width="200" min-width="100" v-on:click=next()> weiter </v-btn>
             </router-link>
           </v-slide-x-reverse-transition>
         </template>

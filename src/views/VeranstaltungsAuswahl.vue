@@ -38,9 +38,10 @@
           <v-card-text>Medienpsychologie</v-card-text>
           </v-col>
             <v-slider
-              v-bind="fruits"
               :tick-labels="ticksLabels"
               :max="4"
+              color="light-blue darken-4"
+              track-color="light-grey"
               step="1"
               ticks="always"
               tick-size="1"
@@ -56,9 +57,10 @@
               <v-card-text>Psychologie</v-card-text>
             </v-col>
             <v-slider
-              v-bind="fruits"
               :tick-labels="ticksLabels"
               :max="4"
+              color="light-blue darken-4"
+              track-color="light-grey"
               step="1"
               ticks="always"
               tick-size="1"
@@ -76,7 +78,7 @@
 
         </v-col>
         <router-link to='/postyourquestion'>
-        <v-btn lable="Test">Weiter</v-btn>
+        <v-btn class="light-blue darken-4 white--text"  lable="Test">Weiter</v-btn>
         </router-link>
 
       </v-row>

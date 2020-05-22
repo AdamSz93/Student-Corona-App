@@ -11,12 +11,6 @@
                            <v-column>
                                 <v-list>
                                     <v-list-item>
-                                        <v-list-item-avatar>
-                                            <v-img src="('../assets/logo.png')"></v-img>
-                                        </v-list-item-avatar>
-                                    </v-list-item>
-
-                                    <v-list-item>
                                         <h3>Universität</h3>
                                        
                                     </v-list-item>

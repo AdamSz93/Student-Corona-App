@@ -9,7 +9,7 @@
         <v-row class="mb-4">
             <v-column>
                 <router-link to='/veranstaltungsauswahl'>
-                    <v-btn round color="primary" dark  v-if="seen">
+                    <v-btn round color="light-blue darken-4" dark  v-if="seen">
                        Fragen
                     </v-btn>
                 </router-link>
@@ -19,7 +19,7 @@
         <v-row class="mb-4">
             <v-column>
                 <router-link to="/home">
-                     <v-btn round color="primary" dark v-if="seen">
+                     <v-btn round color="light-blue darken-4" dark v-if="seen">
                         Gruppen
                     </v-btn>
                 </router-link>
@@ -29,7 +29,7 @@
             
         <v-row class="mb-4">
             <v-column>
-                <v-btn class="mx-2" fab dark color="primary" v-on:click="bubbels" >
+                <v-btn class="mx-2" fab dark color="light-blue darken-4" v-on:click="bubbels" >
                     <v-icon large dark>mdi-plus</v-icon>
                 </v-btn>
             </v-column>
